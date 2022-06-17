@@ -7,7 +7,7 @@ import (
 
 func main() {
 	//Trapecio
-	a, b, h := 14, 20, 5
+	var a, b, h uint64 = 14, 20, 5
 
 	area := ((a + b) / 2) * h
 
