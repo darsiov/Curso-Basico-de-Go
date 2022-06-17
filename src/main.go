@@ -1,25 +1,27 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "fmt"
 
 func main() {
-	//Trapecio
-	var a, b, h uint8 = 14, 20, 5
+	//Declaración de variables
+	helloMessage := "Hello"
+	worldMessage := "world"
 
-	area := ((a + b) / 2) * h
+	//Println
+	fmt.Println(helloMessage, worldMessage) //Imprime con un salto de linea automatico
+	fmt.Println(helloMessage, worldMessage)
 
-	fmt.Println("Medidas del trapecio:  a, b, h = (", a, ",", b, ",", h, ") cm")
-	fmt.Println("Área del trapecio:", area, "cm^2")
+	//Printf
+	nombre := "Platzi"
+	cursos := 500
+	fmt.Printf("%s tiene más de %d cursos \n", nombre, cursos) //Imprime según el formato
+	fmt.Printf("%v tiene más de %v cursos \n", nombre, cursos)
 
-	fmt.Println("-----------------------------------------------------------------------")
-	//Circulo
-	var r float32 = 4
+	//Sprintf
+	message := fmt.Sprintf("%s tiene más de %d cursos", nombre, cursos) //Retorna la un string como variable usando el mismo metodo de Printf
+	fmt.Println(message)
 
-	areaCirculo := math.Pi * r * r
-
-	fmt.Println("Radio del circulo", r, "cm")
-	fmt.Println("Área del ciculo:", areaCirculo, "cm^2")
+	//Tipos de datos
+	fmt.Printf("helloMessage: %T\n", helloMessage)
+	fmt.Printf("cursos: %T", cursos)
 }
