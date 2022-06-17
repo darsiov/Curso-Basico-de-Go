@@ -7,7 +7,7 @@ import (
 
 func main() {
 	//Trapecio
-	var a, b, h uint64 = 14, 20, 5
+	var a, b, h uint8 = 14, 20, 5
 
 	area := ((a + b) / 2) * h
 
@@ -16,7 +16,7 @@ func main() {
 
 	fmt.Println("-----------------------------------------------------------------------")
 	//Circulo
-	var r float64 = 4
+	var r float32 = 4
 
 	areaCirculo := math.Pi * r * r
 
