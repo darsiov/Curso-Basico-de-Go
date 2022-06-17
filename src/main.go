@@ -1,47 +1,25 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-	// Area de un cuadrado
-	const baseCuadrado = 10
-	areaCuadrado := baseCuadrado * baseCuadrado
+	//Trapecio
+	a, b, h := 14, 20, 5
 
-	fmt.Println("Area cuadrado: ", areaCuadrado)
+	area := ((a + b) / 2) * h
 
-	x := 10
-	y := 50
+	fmt.Println("Medidas del trapecio:  a, b, h = (", a, ",", b, ",", h, ") cm")
+	fmt.Println("Área del trapecio:", area, "cm^2")
 
-	//Suma
-	result := x + y
-	fmt.Println("Suma:", result)
+	fmt.Println("-----------------------------------------------------------------------")
+	//Circulo
+	var r float64 = 4
 
-	//Resta
+	areaCirculo := math.Pi * r * r
 
-	result = y - x
-	fmt.Println("Resta:", result)
-
-	//Multiplicación
-
-	result = x * y
-	fmt.Println("Multiplicacion:", result)
-
-	//Division
-
-	result = y / x
-	fmt.Println("Division:", result)
-
-	// Modulo
-	result = y % x
-	fmt.Println("Residuo:", result)
-
-	// Incremental
-	x++
-	fmt.Println("Incremental:", x)
-
-	//Decremental
-	x--
-	fmt.Println("Decremental:", x)
-
-	//Retos, calcular el area de un trapecio y un circulo
+	fmt.Println("Radio del circulo", r, "cm")
+	fmt.Println("Área del ciculo:", areaCirculo, "cm^2")
 }
