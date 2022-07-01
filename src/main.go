@@ -2,26 +2,29 @@ package main
 
 import "fmt"
 
-func main() {
-	//Declaración de variables
-	helloMessage := "Hello"
-	worldMessage := "world"
-
-	//Println
-	fmt.Println(helloMessage, worldMessage) //Imprime con un salto de linea automatico
-	fmt.Println(helloMessage, worldMessage)
-
-	//Printf
-	nombre := "Platzi"
-	cursos := 500
-	fmt.Printf("%s tiene más de %d cursos \n", nombre, cursos) //Imprime según el formato
-	fmt.Printf("%v tiene más de %v cursos \n", nombre, cursos)
-
-	//Sprintf
-	message := fmt.Sprintf("%s tiene más de %d cursos", nombre, cursos) //Retorna la un string como variable usando el mismo metodo de Printf
+func helloWorldFunction(message string) {
 	fmt.Println(message)
+}
 
-	//Tipos de datos
-	fmt.Printf("helloMessage: %T\n", helloMessage)
-	fmt.Printf("cursos: %T", cursos)
+func tripleArgumento(a, b int, c string) {
+	fmt.Println(a, b, c)
+}
+
+func multiplicaPorDos(a int) int {
+	return a * 2
+}
+
+func doubleReturn(a int) (c, d int) {
+	return a, a * 2
+}
+
+func main() {
+	helloWorldFunction("Hola mundo")
+	tripleArgumento(1, 2, "hola")
+
+	value := multiplicaPorDos(2)
+	fmt.Println("Value:", value)
+
+	_, value2 := doubleReturn(2) // ignorar un valor de una funcion que retorna más valores
+	fmt.Println("Value y Value *2:", value2)
 }
