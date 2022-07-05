@@ -1,30 +1,31 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
-func helloWorldFunction(message string) {
-	fmt.Println(message)
+func areaTrapecio(a, b, h float64) float64 {
+	area := ((a + b) / 2) * h
+	return area
 }
-
-func tripleArgumento(a, b int, c string) {
-	fmt.Println(a, b, c)
+func areaCirculo(r float64) float64 {
+	area := math.Pi * r * r
+	return area
 }
-
-func multiplicaPorDos(a int) int {
-	return a * 2
-}
-
-func doubleReturn(a int) (c, d int) {
-	return a, a * 2
+func separador() {
+	fmt.Println("-----------------------------------------------------------------------")
 }
 
 func main() {
-	helloWorldFunction("Hola mundo")
-	tripleArgumento(1, 2, "hola")
+	var a, b, h float64 = 14, 20, 5
+	var r float64 = 4
+	aT := areaTrapecio(a, b, h)
+	aC := areaCirculo(r)
+	fmt.Println("Medidas del trapecio:  a, b, h = (", a, ",", b, ",", h, ") cm")
+	fmt.Println("Área del trapecio:", aT, "cm^2")
+	separador()
+	fmt.Println("Radio del circulo", r, "cm")
+	fmt.Println("Área del ciculo:", aC, "cm^2")
 
-	value := multiplicaPorDos(2)
-	fmt.Println("Value:", value)
-
-	_, value2 := doubleReturn(2) // ignorar un valor de una funcion que retorna más valores
-	fmt.Println("Value y Value *2:", value2)
 }
